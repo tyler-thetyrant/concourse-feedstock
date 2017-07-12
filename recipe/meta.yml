@@ -1,0 +1,24 @@
+package:
+  name: concourse
+  version: 2.7.1
+
+requirements:
+  build:
+    - m2-curl [win]
+    - curl    [unix]
+
+test:
+  commands:
+    - %PREFIX/Scripts/concourse.exe /v  [win]
+    - concourse -v                      [unix]
+
+about:
+  home: https://github.com/concourse/concourse
+  license: Apache-2.0
+  summary: Concourse is a pipeline-based CI system written in Go.
+  # doc_url: http://www.fabfile.org/
+  # dev_url: https://github.com/mathiasertl/fabric
+
+extra:
+  recipe-maintainers:
+    - tyler-thetyrant
